@@ -28,7 +28,7 @@ describe('Authenticate Use Case', () => {
     expect(user.id).toEqual(expect.any(String))
   })
 
-  it('should be able to authenticate with wrong email', async () => {
+  it('should not be able to authenticate with wrong email', async () => {
     await expect(() =>
       sut.execute({
         email: 'johndoe@example.com',
